@@ -1,0 +1,33 @@
+flight_search_task:
+  description: >
+    Search for the best flight options from {date} to {destination} from {origin} considering various airlines and travel dates.
+    Ensure options are cost-effective and convenient for a digital nomad lifestyle.
+  expected_output: >
+    A detailed list of the top flight options including prices, dates, and any applicable discounts for {destination}.
+
+accommodation_search_task:
+  description: >
+    Identify accommodations in {destination} that match the criteria of proximity to {activities} and essentials like coffee shops and gyms.
+    Evaluate user reviews and amenities to ensure suitability for long stays.
+  expected_output: >
+    A curated list of accommodations with detailed descriptions, pricing, and proximity to preferred amenities in {destination}.
+
+activity_planning_task:
+  description: >
+    Organize a list of recommended activities in {destination} that align with the interests of surfing, yoga, and other preferences.
+    Highlight the best local spots that are must-visits for a digital nomad.
+  expected_output: >
+    An engaging list of activities and local attractions in {destination}, each with a brief overview and why they are recommended.
+
+routine_planning_task:
+  description: >
+    Develop a daily routine for a stay in {destination} that balances work with leisure activities such as {activities}.
+    Include optimal times for work in co-working spaces or coffee shops, and time for relaxation and exercise.
+  expected_output: >
+    A structured daily plan for a digital nomad in {destination}, formatted in a clear and easy-to-follow manner.
+
+compile_travel_itinerary_task:
+  description: >
+    Compile a comprehensive travel itinerary that includes the best flight options with prices , accommodation details with prices, planned activities, and a daily routine for the {destination}. The itinerary should provide a brief rationale for each choice, explaining how it aligns with the user's {preferences} and activities.
+  expected_output: >
+    A detailed travel itinerary that includes flight options, accommodation details, activities, and a daily routine for the destination. The itinerary should be formatted as markdown, including a brief rationale for each choice and price if it cointains, explaining how it aligns with the user's preferences and activities.
