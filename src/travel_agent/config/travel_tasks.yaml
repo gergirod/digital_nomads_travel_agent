@@ -1,0 +1,71 @@
+inmigration_task:
+  description: "Research and compile a comprehensive report on visa and entry requirements for {destination} for a traveler with {nationality} passport. 
+  Focus on providing information about visa types available, application processes, duration of stay, costs, and any special considerations for digital nomads, 
+  such as visas that allow for extended stays or remote work."
+  expected_output: "A detailed report outlining all necessary visa and entry requirements for {destination} tailored to a {nationality} passport holder. This 
+  report should include:
+
+    Types of visas applicable and their specific conditions.
+    Step-by-step guidance on the application process.
+    Required documents and where to obtain them.
+    Fees associated with each type of visa application.
+    Special provisions for digital nomads, including any visas aimed at remote workers.
+    Contact information for the nearest embassy or consulate.
+    This document will ensure the traveler is fully informed about their legal responsibilities and options, aiding in a hassle-free preparation for their journey."
+
+flight_search_task:
+  description: "Identify and compare the best flight options from {origin} to {destination} starting {from_date}. Focus on identifying flights that offer maximum flexibility, such as free cancellations and changes, which are ideal for digital nomads with unpredictable schedules. Additionally, highlight airlines known for accommodating remote workers with extra perks like additional baggage allowance and onboard Wi-Fi."
+  expected_output: "A comprehensive list of the top 5 flight options that meet the criteria of flexibility and additional perks for digital nomads. Each option should include:
+    Airline name and flight number.
+    A Detail of the route, how many stops and all those details
+    Total cost, including all fees and charges.
+    Details on flexibility (cancellation policies, rebooking options).
+    Information on any extra perks relevant to digital nomads (e.g., extra baggage, Wi-Fi availability).
+    Direct links to booking sites where the flights can be purchased.
+    This report will enable the digital nomad to make an informed decision on the best flight options based on their specific travel needs and preferences."
+
+travel_agent_task:
+  description: "Summarize the immigration and flight search tasks, then append information about visa requirements for each route. Ensure all data is concise and informs the traveler about any additional entry requirements per route."
+  expected_output: "A comprehensive report that includes: \n
+        1. Summarized immigration requirements for {destination} with user nationality {nationality}. \n
+        2. Top 5 flight options with detailed route, prices, flight details, and visa requirements. \n
+        3. Any additional visa-related advice for the routes identified."
+
+accommodation_search_task:
+  description: "Explore and evaluate accommodations in {destination} that cater specifically to the needs of digital nomads. The search should
+    prioritize properties that offer high-speed internet, proximity to co-working spaces, and lifestyle amenities such as gyms and coffee shops.
+    Additionally, the accommodations should align with the nomads budget and preferences for activities like {activities} and user work environemt
+    preferences like {work_environment_preferences} and health preferencs like {health_preferences}"
+  expected_output: "A detailed list of the top 5 nomad-friendly accommodations in {destination} comfortable to the user activities {activities} and 
+    preferences like {work_environment_preferences} and preferences like {accomodation_preferences}, each entry should include:
+
+    Name and type of accommodation (e.g., hotel, apartment, hostel) provide the link to the website.
+    link to the website of the accomodation.
+    Detailed descriptions of the internet capabilities and workspace options.
+    Information on proximity to co-working spaces and other relevant amenities.
+    Reviews or ratings highlighting the suitability for digital nomads.
+    Pricing details for the duration of the stay.
+    Links to booking platforms or contact details for direct booking.
+    List some exampples for the user work preferences like {work_environment_preferences}, health preferences like {health_preferences}
+    This list will assist the digital nomad in making an informed decision on where to stay based on their work requirements and lifestyle preferences."
+
+health_wellness_plan_task:
+  description: "Develop a weekly health and fitness plan for a digital nomad based on their current location,
+        focusing on their specific health preferences: {health_preferences}.
+        This includes finding local gyms, identifying walking routes, and recommending dietary options 
+        like vegan or gluten-free meals. Ensure the plan adapts to different locations and includes flexible 
+        options to match the nomad's unpredictable schedule bas on user destination {destination}."
+  expected_output: "A detailed weekly plan that includes: \n
+    1. Accommodation options that were identified in previous tasks, including details like location, amenities, price,
+        and suitability for a digital nomad's needs.
+    2. Local gym memberships or day pass options, focusing on {health_preferences}.\n
+    3. Recommended walking or jogging routes, aligning with preferences for fitness and walking.\n
+    4. List of nearby vegan or gluten-free restaurants.
+    5. Any health-oriented community events or activities that cater to healthy living."
+
+
+daily_agent_task:
+  description: "Displays the final outputs of the acommodation_search_task and the health_wellness_plan_taks."
+  expected_output: "A comprehensive report that includes: \n
+        1. All the information from the accommodation_search_task with links to the accomodatiosn that will be the same 5 accomodations options with all the information available. \n
+        2. All the information from the health_wellness_plan_task "
