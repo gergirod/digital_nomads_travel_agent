@@ -28,15 +28,14 @@ travel_agent_task:
   description: "Summarize the immigration and flight search tasks, then append information about visa requirements for each route. Ensure all data is concise and informs the traveler about any additional entry requirements per route."
   expected_output: "A comprehensive report that includes: \n
         1. Summarized immigration requirements for {destination} with user nationality {nationality}. \n
-        2. Top 5 flight options with detailed route, prices, flight details, and visa requirements. \n
+        2. Top 5 flight options with detailed route, prices, flight details, booking links, and visa requirements. \n
         3. Any additional visa-related advice for the routes identified."
 
 accommodation_search_task:
   description: "Explore and evaluate accommodations in {destination} that cater specifically to the needs of digital nomads. The search should
-    prioritize properties that offer high-speed internet, proximity to co-working spaces, and lifestyle amenities such as gyms and coffee shops.
-    Additionally, the accommodations should align with the nomads budget and preferences for activities like {activities} and user work environemt
-    preferences like {work_environment_preferences} and health preferencs like {health_preferences}"
-  expected_output: "A detailed list of the top 5 nomad-friendly accommodations in {destination} comfortable to the user activities {activities} and 
+    prioritize properties that offer {accomodation_preferences} and {work_environment_preferences}.
+    Additionally, the accommodations should align with the nomads budget and preferences, nearby activities like {activities} "
+  expected_output: "A detailed list of the top 10 nomad-friendly accommodations  comfortable to the user activities {activities} and 
     preferences like {work_environment_preferences} and preferences like {accomodation_preferences}, each entry should include:
 
     Name and type of accommodation (e.g., hotel, apartment, hostel) provide the link to the website.
@@ -46,7 +45,7 @@ accommodation_search_task:
     Reviews or ratings highlighting the suitability for digital nomads.
     Pricing details for the duration of the stay.
     Links to booking platforms or contact details for direct booking.
-    List some exampples for the user work preferences like {work_environment_preferences}, health preferences like {health_preferences}
+    List some exampples for the user work preferences like {work_environment_preferences}
     This list will assist the digital nomad in making an informed decision on where to stay based on their work requirements and lifestyle preferences."
 
 health_wellness_plan_task:
@@ -67,5 +66,5 @@ health_wellness_plan_task:
 daily_agent_task:
   description: "Displays the final outputs of the acommodation_search_task and the health_wellness_plan_taks."
   expected_output: "A comprehensive report that includes: \n
-        1. All the information from the accommodation_search_task with links to the accomodatiosn that will be the same 5 accomodations options with all the information available. \n
-        2. All the information from the health_wellness_plan_task "
+        1. All the information from the accomodation_specialist\n
+        2. All the information from the nomad_health_agent\n"
